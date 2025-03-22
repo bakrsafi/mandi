@@ -1,0 +1,82 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}   
+
+	<!-- Start slides -->
+	<div id="slides" class="cover-slides">
+		<ul class="slides-container">
+			<li class="text-center">
+				<img src="{% static 'images/slider-01.jpg' %}" alt="">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<h1 class="m-b-20"><strong>مرحبًا بكم<br> في مطعم مندي تنور وحطب</strong></h1>
+							<p class="m-b-40">استمتعوا بأشهى أطباق المندي، الفريكة، والمأكولات المشوية على الحطب، المحضّرة بأفضل المكونات وبأسلوب الطهي التقليدي الذي يعكس تراثنا العريق.</p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="{% url 'menu' %}">قائمة الطعام</a></p>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="text-center">
+				<img src="{% static 'images/slider-02.jpg' %}" alt="">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<h1 class="m-b-20"><strong>مرحبًا بكم<br> في مطعم مندي تنور وحطب</strong></h1>
+							<p class="m-b-40">استمتعوا بأشهى أطباق المندي، الفريكة، والمأكولات المشوية على الحطب، المحضّرة بأفضل المكونات وبأسلوب الطهي التقليدي الذي يعكس تراثنا العريق.</p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="{% url 'menu' %}">قائمة الطعام</a></p>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="text-center">
+				<img src="{% static 'images/slider-03.jpg' %}" alt="">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<h1 class="m-b-20"><strong>مرحبًا بكم<br> في مطعم مندي تنور وحطب</strong></h1>
+							<p class="m-b-40">استمتعوا بأشهى أطباق المندي، الفريكة، والمأكولات المشوية على الحطب، المحضّرة بأفضل المكونات وبأسلوب الطهي التقليدي الذي يعكس تراثنا العريق.</p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="{% url 'menu' %}">قائمة الطعام</a></p>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="slides-navigation">
+			<a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+		</div>
+	</div>
+	<!-- End slides -->
+
+
+	<!-- Start About -->
+	<div class="about-section-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<img src='{% static "images/gallery-img-04.jpg" %}'alt="" class="img-fluid">
+				</div>
+				<div class="col-lg-6 col-md-6 text-center">
+					<div class="inner-column">
+						<h1>برنامج <span> الطبخ اليومي</span></h1>
+						<h3>المندي والفريكة متوفران يوميًا</h3>
+						<p>
+							السبت : مضغوط
+							<br>الأحد : منسف أردني 
+							<br>الأثنين : بخاري 
+							<br>الثلاثاء : مدفون 
+							<br>الاربعاء : برياني
+							<br> الخميس  : مليحي 
+							<br>الجمعة : برياني + صيادية سمك
+						</p>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About -->
+	
+    
+{% endblock content %}    

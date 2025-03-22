@@ -1,0 +1,71 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}   
+
+	<!-- Start All Pages -->
+	<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>قائمة الطعام الخاصة</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End All Pages -->
+	
+
+    	
+	<!-- Start Menu -->
+	<div class="menu-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>قائمة الطعام الخاصة</h2>
+						<p>استمتع بتجربة أشهى الأطباق العربية الأصيلة المحضرة بعناية وفقاً للوصفات التقليدية.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="special-menu text-center">
+						<div class="button-group filter-button-group">
+							<button class="active" data-filter="*">الكل</button>
+							<button data-filter=".main-dishes">الاطباق الرئيسية</button>
+							<button data-filter=".hot-appetizers">مقبلات ساخنة</button>
+							<button data-filter=".cold-appetizers">مقبلات باردة</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row special-list">
+
+
+                {% for product1 in product %}
+				<div class="col-lg-4 col-md-6 special-grid {{ product1.category|slugify }}">
+					<div class="gallery-single fix">
+                        {% if product1.image %}
+                        <img class="img-fluid" src="{{ product1.image.url }}" alt="Image">
+                        {% else %}
+						<img src='{% static "images/img-01.jpg"%}' class="img-fluid" alt="Image">
+                        {% endif %}
+						<div class="why-text">
+							<h4>{{product1.name}}</h4>
+                            <h6 class="fc">{{product1.description}}</h6>
+                            <h6 class="fc">{{product1.ingredients}}</h6>
+							<h5> {{product1.price}}$</h5>
+							<h6 class="fc">{{product1.category}}</h6>
+						</div>
+					</div>
+				</div>
+                {% endfor %}
+				
+			</div>
+		</div>
+	</div>
+	<!-- End Menu -->
+
+
+
+{% endblock content %}   
