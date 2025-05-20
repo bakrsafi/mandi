@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o4ds-@0o2b&-bia40o@cb$3z-edcwm=eg$jt=3rj5#oq#mhvl4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.bakrsafi.com','bakrsafi.com']
+ALLOWED_HOSTS = ["192.168.1.7",'127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'products.apps.ProductsConfig',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
 STATICFILES_DIRS =[
     BASE_DIR / 'static'
 ]

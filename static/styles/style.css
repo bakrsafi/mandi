@@ -409,7 +409,8 @@ button:focus{
 .filter-button-group button.active {
     background: #f68123;
     color: #fff;
-    box-shadow: 2px 20px 45px 5px rgba(0,0,0,.2);
+    box-shadow: 1px 4px 15px 2px rgba(0, 0, 0, 0.1);
+
 }
 
 .gallery-single{
@@ -433,6 +434,7 @@ button:focus{
     padding: 12px 12px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+    z-index: 3 !important;
 }
 .why-text h4{
 	color: #ffffff;
@@ -455,8 +457,8 @@ button:focus{
 	color: #ffffff;
 }
 
-.gallery-single:hover .why-text{
-	bottom: 0px;
+.gallery-single.active .why-text {
+  bottom: 0;
 }
 
 
@@ -1324,6 +1326,25 @@ blockquote {
 	font-size: 30px;
 }
 
+
+/*  map  */
+#map1, #map2, #map3  {
+    height: 400px; 
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    z-index: 2;
+
+}
+.flex-c{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*  map  */
 
 
 

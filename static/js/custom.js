@@ -71,7 +71,9 @@
 		var $grid = $('.special-list').isotope({
 			itemSelector: '.special-grid'
 		});
+		    $('.special-menu button[data-filter=".main-dishes"]').click();
 	});
+	
 	
 	/* ..............................................
     BaguetteBox
